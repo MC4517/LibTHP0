@@ -44,38 +44,10 @@ jnr = ["@jcunniet","@PaulLampon","@Aziliz31","@ssoumier","@marionsouzeau","@gael
     puts""
 
     puts "Répartition par taille des handles"
-    print "Nombre de handle avec 1 caractère : "
-    puts jnr.count { |w| w.length == 1 }
 
-    print "Nombre de handle avec 2 caractères : "
-    puts jnr.count { |w| w.length == 2 }
-    print "Nombre de handle avec 3 caractères : "
-    puts jnr.count { |w| w.length == 3 }
-    print "Nombre de handle avec 4 caractères : "
-    puts jnr.count { |w| w.length == 4 }
-    print "Nombre de handle avec 5 caractères : "
-    puts jnr.count { |w| w.length == 5 }
-    print "Nombre de handle avec 6 caractères : "
-    puts jnr.count { |w| w.length == 6 }
-    print "Nombre de handle avec 7 caractères : "
-    puts jnr.count { |w| w.length == 7 }
-    print "Nombre de handle avec 8 caractères : "
-    puts jnr.count { |w| w.length == 8 }
-    print "Nombre de handle avec 9 caractères : "
-    puts jnr.count { |w| w.length == 9 }
-    print "Nombre de handle avec 10 caractères : "
-    puts jnr.count { |w| w.length == 10 }
-    print "Nombre de handle avec 11 caractères : "
-    puts jnr.count { |w| w.length == 11 }
-    print "Nombre de handle avec 12 caractères : "
-    puts jnr.count { |w| w.length == 12 }
-    print "Nombre de handle avec 13 caractères : "
-    puts jnr.count { |w| w.length == 13 }
-    print "Nombre de handle avec 14 caractères : "
-    puts jnr.count { |w| w.length == 14 }
-    print "Nombre de handle avec 15 caractères : "
-    puts jnr.count { |w| w.length == 15 }
-    print "Nombre de handle avec 16 caractères : "
-    puts jnr.count { |w| w.length == 16 }
+    hash  = jnr.group_by(&:length)
+hash.each do |length, arr_of_words|
+  puts "Nombre de handle avec #{length} caractères : #{arr_of_words.count}"
+end
    
 
